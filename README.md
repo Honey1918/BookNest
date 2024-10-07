@@ -2,6 +2,9 @@
 
 This is a sample application that makes use of reanimateed, shared elements transitions and lottie to deliver a smooth native experience with delightlful animations.
 
+<img width="369" alt="Screenshot 2024-10-08 at 12 29 57 AM" src="https://github.com/user-attachments/assets/ada0055e-346d-4135-8b2f-dd5f4b03f12c">
+
+
 ![](book.gif) ![](dbook.gif)
 
 ### Goals
