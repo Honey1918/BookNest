@@ -1,6 +1,6 @@
 import React from 'react';
 import { createSharedElementStackNavigator } from 'react-navigation-shared-element';
-
+import Loginscreen from './screens/loginscreen';  
 import BooksScreen from './screens/BooksScreen';
 import BookListScreen from './screens/BookListScreen';
 import BookDetailsScreen from './screens/BookDetailsScreen';
@@ -28,7 +28,7 @@ function RootNavigator() {
     },
   };
 
-  const searchTranstion = {
+  const searchTransition = {
     animation: 'spring',
     config: {
       mass: 3,
@@ -42,7 +42,7 @@ function RootNavigator() {
 
   return (
     <BookStack.Navigator
-      initialRouteName="BookList"
+      initialRouteName="Login" // Set Loginscreen as the initial route
       screenOptions={{
         headerShown: false,
         cardOverlayEnabled: true,
@@ -50,6 +50,7 @@ function RootNavigator() {
       }}
       detachInactiveScreens={false}
     >
+      <BookStack.Screen name="Login" component={Loginscreen} />
       <BookStack.Screen name="Books" component={BooksScreen} />
       <BookStack.Screen name="BookList" component={BookListScreen} />
       <BookStack.Screen
@@ -82,8 +83,8 @@ function RootNavigator() {
         options={{
           cardStyleInterpolator: fadeScreen,
           transitionSpec: {
-            open: searchTranstion,
-            close: searchTranstion,
+            open: searchTransition,
+            close: searchTransition,
           },
         }}
       />
